@@ -1,5 +1,5 @@
 
-const express = required('express');
+const express = require('express');
 const cors = required('cors');
 const dotenv = required('dotenv');
 const animalRoutes = required('./routes/animalRoutes');
