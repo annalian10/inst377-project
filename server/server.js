@@ -1,8 +1,8 @@
 
 const express = require('express');
-const cors = required('cors');
-const dotenv = required('dotenv');
-const animalRoutes = required('./routes/animalRoutes');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const animalRoutes = require('./routes/animalRoutes');
 
 dotenv.config();
 const app = express();
