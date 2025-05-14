@@ -1,0 +1,1 @@
+{/* React DOM render point */}

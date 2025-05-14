@@ -1,1 +1,0 @@
-// Supabase Setup
