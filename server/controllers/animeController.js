@@ -5,10 +5,16 @@ const supabase = require('../db/supabaseClient');
 const getRecommendations = async (req, res) => {
     try {
         const response = await fetch('https://api.jikan.moe/v4/anime?q=naruto');
+
+        if (!response.ok) {
+            console.error("Jikan API response error:", response.status, response.statusText);
+            return res.status(500).json({ error: 'Jikan API failed: ' + response.statusText });
+        }
+
         const data = await response.json();
         res.json(data.data);
     } catch (error) {
-        console.error(error);
+        console.error("Fetch error:", error.message);
         res.status(500).json({ error: 'Failed to fetch recommendations' });
     }
 };
