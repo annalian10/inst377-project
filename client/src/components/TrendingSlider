@@ -1,0 +1,49 @@
+import { useEffect, useRef } from 'react';
+import Glider from 'glider-js';
+import 'glider-js/glider.min.css';
+
+export default function TrendingSlider({ animeList }) {
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    if (sliderRef.current && animeList.length > 0) {
+      new Glider(sliderRef.current, {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: '#dots',
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next',
+        },
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3,
+            }
+          }
+        ]
+      });
+    }
+  }, [animeList]);
+
+  return (
+    <div className="my-6">
+      <h3 className="text-xl font-semibold mb-2">Trending</h3>
+      <div className="glider-contain">
+        <div className="glider" ref={sliderRef}>
+          {animeList.map(anime => (
+            <div key={anime.mal_id} className="p-2">
+              <img src={anime.images.jpg.image_url} alt={anime.title} className="rounded" />
+              <p className="text-sm mt-1">{anime.title}</p>
+            </div>
+          ))}
+        </div>
+        <button className="glider-prev">«</button>
+        <button className="glider-next">»</button>
+        <div id="dots" className="mt-2"></div>
+      </div>
+    </div>
+  );
+}
