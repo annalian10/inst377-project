@@ -15,7 +15,7 @@ export const getRecommendations = async (req, res) => {
 };
 
 export const saveWatchlist = async (req, res) => {
-  const { title, userId } = req.body;
+  const { title, userid } = req.body;
 
   const { data, error } = await supabase
     .from("watchlists")
