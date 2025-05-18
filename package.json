@@ -1,0 +1,16 @@
+{
+  "name": "inst377-project",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "node-fetch": "^3.3.2"
+  }
+}
