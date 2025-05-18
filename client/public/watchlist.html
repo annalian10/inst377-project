@@ -1,10 +1,10 @@
-<!-- index.html -->
+<!-- watchlist.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Anime Lens</title>
+  <title>Watchlist | Anime Lens</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,27 +22,23 @@
 
   <main>
     <section class="content">
-      <h2>Search for Your Next Favorite Anime</h2>
-      <form id="search-form">
-        <input type="text" id="anime-name" placeholder="Search anime..." />
-        <button type="submit">Search</button>
-      </form>
-      <div id="results" class="anime-grid"></div>
+      <h2>Saved Anime</h2>
+      <p>This is your personal watchlist. Save shows to watch later!</p>
+      <ul id="watchlist">
+        <!-- JS will populate saved titles -->
+      </ul>
     </section>
 
     <aside class="sidebar">
-      <h2>Tips:</h2>
-      <ul>
-        <li>Use keywords like “fantasy”, “comedy”, etc.</li>
-        <li>Click titles to get more info.</li>
-      </ul>
+      <h2>Watchlist Tips</h2>
+      <p>Click to remove shows you've finished.</p>
     </aside>
   </main>
 
   <footer>
-    <p>Created by Anna Lian and Logan Le | INST377 - Final Project</p>
+    <p>Created by Anna Lian and Logan Le | INST377</p>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="watchlist.js"></script>
 </body>
 </html>
