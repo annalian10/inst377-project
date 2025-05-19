@@ -2,12 +2,12 @@
 # Anime Lens
 # Anna Lian & Logan Le
 
-# Project Title
-**Anime Lens** – A web-based anime and manga discovery platform for fans to explore trending shows, search by genre or keyword, save watchlists, and participate in community discussions.
+# Anime Lens
+A web-based anime and manga discovery platform for fans to explore trending shows, search by genre or keyword, save watchlists, and participate in community discussions.
 
 ---
 
-## Description of the Project
+## What is Anime Lens?
 Anime Lens is designed to help users discover new anime and manga series based on their interests. With thousands of titles available across platforms, it can be overwhelming to find your next favorite show. Anime Lens solves this by integrating multiple anime APIs (like Jikan, AniList, and Kitsu) to offer real-time search, trending recommendations, and a space for users to save shows or leave comments in a community board.
 
 **Key Features:**
