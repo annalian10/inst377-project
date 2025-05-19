@@ -56,8 +56,93 @@ input[type="text"]:focus {
     border-radius: 10px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+input, textarea {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1em;
+}
+
+button {
+  padding: 0.7em 1.2em;
+  background-color: #2d2d72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:hover {
+  background-color: #444499;
+}
+
+#comments-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#comments-list li {
+  background: #f0f0ff;
+  border-radius: 6px;
+  padding: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+
+.anime-grid {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1em;
+}
+
+.trending {
+  grid-column: 1 / -1;
+  margin-top: 2em;
+  background: white;
+  padding: 1.5em;
+  border-radius: 8px;
+}
+
+.trending-grid {
+  display: flex;
+  gap: 1em;
+  overflow-x: auto;
+  padding-top: 1em;
+}
+
+.trending-card {
+  min-width: 150px;
+  background: #e0e7ff;
+  padding: 1em;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+ol {
+  margin-left: 1.5em;
+  padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 0.75em;
+}
+
 .sidebar {
-    background-color: #585A73;
+    background-color: #ffffff;
     width: 30%;
     padding: 15px;
     margin: 20px;
@@ -65,6 +150,11 @@ input[type="text"]:focus {
     border-radius: 10px;
 }
 
-.sidebar:hover {
-    background-color: #92817F;
+.home-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-link:hover {
+  text-decoration: underline;
 }

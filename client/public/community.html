@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anime Lens | Community</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+  <h1><a href="index.html" class="home-link">Anime Lens</a></h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Discover</a></li>
+      <li><a href="watchlist.html">Watchlist</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="content">
+      <h2>Community Comments</h2>
+
+      <form id="comment-form">
+        <label for="username">Name:</label>
+        <input type="text" id="username" required />
+
+        <label for="anime-title">Anime Title:</label>
+        <input type="text" id="anime-title" required />
+
+        <label for="comment">Your Comment:</label>
+        <textarea id="comment" rows="4" required></textarea>
+
+        <button type="submit">Post Comment</button>
+      </form>
+
+      <div id="comments-section">
+        <h3>All Comments</h3>
+        <ul id="comments-list"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Anna Lian and Logan Le | INST377 - Final Project</p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('comment-form');
+    const commentsList = document.getElementById('comments-list');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('username').value.trim();
+      const title = document.getElementById('anime-title').value.trim();
+      const comment = document.getElementById('comment').value.trim();
+
+      if (name && title && comment) {
+        const newComment = document.createElement('li');
+        newComment.innerHTML = `<strong>${name}</strong> on <em>${title}</em>:<br>${comment}`;
+        commentsList.prepend(newComment);
+
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
