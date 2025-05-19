@@ -28,4 +28,70 @@ Anime Lens is optimized for all major modern browsers and devices:
 
 ---
 
-## Link to Developer Manual
+## Developer Manual
+
+This section outlines how to set up, run, and maintain the Anime Lens project.
+
+### 🛠 Local Development Setup
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/annalian10/inst377-project.git
+   cd inst377-project
+   ```
+
+2. **Install Dependencies**
+   Make sure you have Node.js (v18+) installed.
+   ```bash
+   npm install
+   ```
+
+3. **Environment Variables**
+   Create a `.env` file in the `server/` directory:
+   ```
+   SUPABASE_URL=your-supabase-url
+   SUPABASE_KEY=your-supabase-api-key
+   ```
+
+4. **Start Backend Server**
+   From the root project directory:
+   ```bash
+   npm start
+   ```
+   This runs the Express backend at `http://localhost:3001`.
+
+5. **Run Frontend**
+   Open `index.html` or deploy using Vercel.
+
+---
+
+### 📡 API Endpoints
+
+#### `GET /api/anime/recommendations`
+- Fetches trending anime using Jikan API.
+
+#### `POST /api/anime/watchlist`
+- Saves anime to a user's watchlist in Supabase.
+- Request body example:
+  ```json
+  {
+    "title": "Naruto",
+    "image": "https://cdn.example.com/naruto.jpg"
+  }
+  ```
+
+---
+
+### 🐞 Known Bugs & Issues
+- Anime search results may return null if external API rate limits are hit.
+- Watchlist does not persist per-user (no auth system yet).
+- Community page is static and not connected to a database.
+
+---
+
+### 🚧 Future Improvements
+- Add user authentication (OAuth or Supabase Auth)
+- Enable profile-based watchlists
+- Support manga alongside anime
+- Connect community board to Supabase
+- Improve UI with theme toggles and animations
