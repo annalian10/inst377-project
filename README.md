@@ -32,6 +32,8 @@ Anime Lens is optimized for all major modern browsers and devices:
 
 This section outlines how to set up, run, and maintain the Anime Lens project.
 
+Vercel Link : https://inst377-project-five.vercel.app/
+
 ### 🛠 Local Development Setup
 
 1. **Clone the Repository**
